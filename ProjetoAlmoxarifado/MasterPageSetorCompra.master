@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageSetorCompra.master.cs" Inherits="MasterPageSetorCompra" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+            #topo   {
+                    height: 70px;
+                    width: 100%;
+                    margin-top: -10px;
+                    margin-bottom: 5px;
+                    margin-right: 50px;
+                    margin-left: 50px;
+                    background-color: gray;
+                    border-radius: 0px 0px 10px 10px;
+                    position: fixed;
+                    z-index: 1;
+                    }
+
+            #divEsqueda {
+                    display: inline-block;
+                    height: 700px;
+                    width: 10%;
+                    margin-top: 65px;
+                    background-color: gray;
+                    border-radius: 5px;
+                    float: left;
+                    position: fixed;
+                    z-index: 1;
+                
+                }
+
+                #divCentro {
+                    display: inline-block;
+                    height: 700px;
+                    width: 89%;
+                    margin-top: 65px;
+                    margin-bottom: 5px;
+                    background-color: #E0E0E0 ;
+                    border-radius: 5px;
+                    float: right;
+                    grid-template:inherit;
+                }
+
+                #rodape {
+                    height: 70px;
+                    background-color: gray;
+                    border-radius: 5px;
+                    clear: both;
+                }
+
+                INPUT.Botao {  
+                 width: auto;  
+                 height: auto;  
+                 font-family: verdana;  
+                 background-color: blue;  
+                } 
+
+        
+    </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <div>
+        <div id="topo">
+
+            <asp:Label ID="lblNomeSession" runat="server" ForeColor="White" style="margin-left: 600px" ></asp:Label>
+            <asp:Button ID="logout" runat="server" Text="Logout" Onclick="logout_Click" />
+                    <br />
+
+        </div>
+
+
+        <div id="divEsqueda">
+            <br />
+                         <asp:Button ID="btOrdemCompra" runat="server" Text="Nova Ordem de Compra" OnClick="btOrdemCompra_Click" Font-Size="X-Small"/>
+			             <br />
+			             <br />
+
+                         <asp:Button ID="btPedidos" runat="server" Text="Novo Pedido" OnClick="btPedidos_Click" Font-Size="X-Small" />
+			             <br />
+			             <br />
+                        
+                         <asp:Button ID="btVisualizarPedidos" runat="server" Text="Visualizar Pedidos" OnClick="btVisualizarPedidos_Click" Font-Size="X-Small" />
+			             <br />
+			             <br />
+
+        </div>
+
+        <div  id="divCentro"  >
+        <asp:ContentPlaceHolder id="cthSetorCompra" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+
+
+        <div id="rodape">
+
+        </div>
+    </div>
+    </form>
+</body>
+</html>

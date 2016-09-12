@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PrincipalMasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #login {
+            background-color: white;
+            border-radius: 10px;
+        }
+    </style>
+
+
+</head>
+<body id="body" bgcolor="#A0A0A0 " runat="server">
+
+    <form id="form1" runat="server">
+        <div id="login">
+            <asp:ContentPlaceHolder ID="cphCentralAlmoxarifado" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
